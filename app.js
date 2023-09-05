@@ -30,6 +30,9 @@ io.on('connection', (socket) => {
     socket.speed = Utils.randomRangeInt(settings.speed.min, settings.speed.max);
     socket.name = "BonziBUDDY";
     socket.room = mainroom;
+
+    let cool; // Declare the cool variable here
+
     for (let u in socket.room.users) {
         const users = socket.room.users;
         socket.emit("adduser", {
